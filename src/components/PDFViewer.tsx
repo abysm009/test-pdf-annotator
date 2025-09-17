@@ -369,14 +369,14 @@ export const PDFViewer = ({
 
     window.addEventListener(
       "save-annotated-pdf",
-      // @ts-ignore
+      // @ts-expect-error tsissue
       handleSavePDF as EventListener
     );
 
     return () => {
       window.removeEventListener(
         "save-annotated-pdf",
-        // @ts-ignore
+        // @ts-expect-error  tsissue
         handleSavePDF as EventListener
       );
     };
